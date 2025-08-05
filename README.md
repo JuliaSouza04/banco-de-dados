@@ -71,6 +71,7 @@
 | 6               | Romance  |
 | 6               | Comédia  |
 ## Estrutura não relacional
+```
 { 
 "Nome de série": {"Brilhante Victoria"},
 "Gênero": {"Infantil/comédia"}, 
@@ -89,4 +90,4 @@
 "Temporadas":{"1"}, 
 "Plataforma": {"Prime Video"},
 }
-
+```
