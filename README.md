@@ -13,7 +13,7 @@
 ## Tabela Não Normalizada
 #### Séries
 
-| Nome da Série      |    Gênero      | Temporadas  |  Plataforma   |
+| Nome da Série      |     Gênero          | Temporadas  |  Plataforma   |
 |--------------------|---------------------|-------------|---------------|
 | Brilhante Victoria |Infantil/Comédia     |      4      | Netflix       |
 | Rick and Morty     |Animção/Comédia      |      8      | Amazon Prime  |
@@ -25,6 +25,7 @@
 
 ## Normalização até a 3º Formal Normal
 ### 1º Forma Normal
+##### Separou os gêneros em linhas separadas, cada célula tem apenas 1 valo e repetiu dados da série em cada linha	
 | Nome da Série      |      Gênero         | Temporadas  |  Plataforma   |
 |--------------------|---------------------|-------------|---------------|
 | Brilhante Victoria | Infantil            |      4      | Netflix       |
@@ -42,3 +43,50 @@
 | Eu Nunca...        | Romance             |      4      | Netflix       |
 | Eu Nunca...        | Comédia             |      4      | Netflix       |
 ### 2º Forma Normal
+##### Ela guarda só as informações fixas da série: nome, temporadas e plataforma.
+|ID|	Nome da Série    |Temporadas |	Plataforma  |
+|--|-------------------|-----------|--------------|
+| 1| Brilhante Victoria|	   4	   | Netflix      |
+| 2| Rick and Morty    |	   8	   | Amazon Prime |
+| 3| Mentirosos        | 	   1  	 | Prime Video  |
+| 4| Ginny e Georgia   |	   3     | Netflix      |
+| 5| O Exorcista       |	   2	   | Prime Video  |
+| 6| Eu Nunca...       |	   4	   | Netflix      |
+### 3º Forma Normal
+##### Relaciona qual série tem qual gênero, usando o ID da tabela anterior
+| ID da Série     | Gênero   |
+| --------------- | -------- |
+| 1               | Infantil |
+| 1               | Comédia  |
+| 2               | Animação |
+| 2               | Comédia  |
+| 3               | Ficção   |
+| 3               | Suspense |
+| 4               | Drama    |
+| 4               | Romance  |
+| 4               | Suspense |
+| 5               | Terror   |
+| 5               | Suspense |
+| 6               | Drama    |
+| 6               | Romance  |
+| 6               | Comédia  |
+## Estrutura não relacional
+{ 
+"Nome de série": {"Brilhante Victoria"},
+"Gênero": {"Infantil/comédia"}, 
+"Temporadas":{ "4"}, 
+"Plataforma": {"Netflix"},
+}
+{ 
+"Nome de série": {"Rick and Morty"},
+"Gênero": {Comedia/Animação"}, 
+"Temporadas":{"8"}, 
+"Plataforma": {"Amazon Prime"},
+}
+{ 
+"Nome de série": {"Mentirosos"},
+"Gênero": {"Ficção/Suspense"}, 
+"Temporadas":{"1"}, 
+"Plataforma": {"Prime Video"},
+}
+
